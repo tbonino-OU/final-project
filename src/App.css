@@ -1,38 +1,182 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+}
+/* Style Header component section */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #4a90e2;
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar img {
+  height: 100px;
+  width: auto;
+}
+
+.navbar p {
+  color: white;
+  font-size: 24px;
+  margin: 0 20px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin-left: 30px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+/* Search Bar Styles */
+.search-bar {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 20px;
+  width: 200px;
+  transition: width 0.3s;
+}
+
+.search-bar::placeholder {
+  color: #a0a0a0; /* Placeholder text color */
+}
+
+.search-bar:focus {
+  outline: none; /* Remove outline on focus */
+  border: 2px solid #ffd700; /* Gold border on focus */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    flex-direction: column; /* Stack links vertically */
+    margin-top: 10px;
+  }
+
+  .navbar li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 10px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Style Hero component section */
+section {
+  padding: 20px;
+}
+
+.hero-section {
   display: flex;
   flex-direction: column;
+}
+
+.hero-photo {
+  max-width: 760px;
+  align-self: center;
+}
+
+.hero-header {
+  margin-bottom: 16px;
+}
+
+.hero-text {
+  margin-top: 0;
+}
+
+/* Style Card component section */
+.card {
+  width: 200px;
+  font-size: 15px;
+  margin-left: 20px;
+  position: relative;
+}
+.media-title-name {
+  color: rgb(224, 200, 60);
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(238, 233, 207, 0.7),
+    0 0 25px rgba(255, 215, 0, 0.5);
+  font-size: 1em;
+}
+.card-image {
+  width: 100%;
+  border-radius: 9px;
+  margin-bottom: 9px;
+}
+
+.card-stats {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card-star {
+  height: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-span-gray {
+  color: #4218cb;
+  font-weight: bold;
+}
+.span-description-bold {
+  font-size: 16px;
+  color: #a72f9b;
+}
+.span-price-bold {
+  font-size: 16px;
+  color: #a72f9b;
+}
+
+/* Style Section element in App.js that contains all the Card Component calls  */
+.section-experience-list {
+  flex: 0 0 auto;
+  display: flex;
+  overflow: auto;
+  flex-direction: row;
+}
+
+/* Style Sold out badge  */
+.card-badge {
+  position: absolute; /*make position for .card relative*/
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
 }
