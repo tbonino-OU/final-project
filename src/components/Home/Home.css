@@ -1,0 +1,54 @@
+/* Landing.css */
+
+.landing-page {
+  display: flex;
+  flex-direction: row; /* Set sections in a row (horizontal) */
+  justify-content: space-around; /* Space out the sections evenly */
+  align-items: flex-start; /* Align items to the top */
+  padding: 1rem;
+}
+
+section {
+  width: 30%; /* Adjust width of each section to fit 3 in a row */
+  margin: 0.5rem;
+}
+
+.horizontal-section {
+  display: flex;
+  flex-direction: column; /* Keep elements within each section stacked vertically */
+  align-items: center;
+}
+
+.card {
+  background-color: #f6f7f5;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  width: 100%; /* Take full width of the section */
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 5px;
+
+}
+
+.top-rated-medias {
+   font-size: large;
+   color: rgb(85, 172, 27);
+}
+
+.about-section {
+  padding: 1rem;
+  max-width: 100%; /* Take full width of the section */
+  text-align: left;
+}
+
+.about-section h2 {
+  margin-top: 0;
+}
+.about-mashed-potatoes{
+    color: #4f37a0;
+}
