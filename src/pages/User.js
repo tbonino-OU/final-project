@@ -22,7 +22,7 @@ const User = () => {
         <Header />
         {user ? <h1>Hi, {user}!</h1> : <div><h1>Sign In, or Create a New Account.</h1> <UserSignIn /></div>}
         <h2>Profile</h2>
-        {user ? <p>{profile}!</p> : <div><p>This is where the user profile goes.</p></div>}
+        {user ? <p>{profile}</p> : <div><p>This is where the user profile goes.</p></div>}
 
         {user ? null : <div><h3>Need an account? Sign up:</h3><NewUser /></div>}
         <Footer />

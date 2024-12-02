@@ -8,8 +8,36 @@ import GreatGatsbyCover from "./images/GreatGatsby.jpg";
 import MandalorianCover from "./images/Mandalorian.jpg";
 import CasablancaCover from "./images/CasablancaCover.jpg";
 import PrideAndPrejudiceCover from "./images/PrideAndPrejudiceCover.jpg";
+import axios from "axios";
+import { useState, useEffect } from 'react';
+import Card from "./components/Card";
+
+// fetch data for cards from database
+export const DbData = () => {
+  const [data, setData] = useState([]);
+
+  const FetchData = async () => {
+      const res = await axios.get('http://localhost:8080/media').then((response) =>{
+        const allMedia = response.data;
+        setData(allMedia);
+      }).catch(
+        error => console.error(error)
+      );
+
+
+  useEffect(() => {
+    
+    FetchData();
+  }, []);
+
+};
+
+return(
+  <Card props={data} />
+)};
 
 // Defines an array called data, for a media items (Inceptions) with details like title, type, description, and access platforms
+//const data = [
 const data = [
   {
     id: 1,
@@ -153,6 +181,7 @@ const data = [
       reviewCount: "3.5M",
     },
   },
-];
+]
+
 
 export default data;

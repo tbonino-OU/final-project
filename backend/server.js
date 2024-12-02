@@ -98,7 +98,21 @@ app.post('/signin', (req, res) => {
                 }
             }) */
    
+// component of backend to get data about media from the database
+app.get('/media', (req, res) => {
+    console.log("Fetching media data")
+    
+    //query to get all data for the specific ID
+    db.query("SELECT * FROM media", (err, result) => {
+        if(err) {
+            res.status(418).send(err.message)
+        } else {
+            res.send(result)
+        }
+    })
 
+
+})
 
 app.get('/', (req, res) =>{
     res.send('GET is working')
