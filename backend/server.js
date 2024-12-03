@@ -110,8 +110,6 @@ app.get('/media', (req, res) => {
             res.send(result)
         }
     })
-
-
 })
 
 app.get('/', (req, res) =>{

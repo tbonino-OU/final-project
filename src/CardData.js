@@ -1,6 +1,6 @@
-//Defines an array called data, which contains information about various media items (in this case, the movie 
-//"Inception"). Each media item in the array is an object with several properties, including:
-// Import cover images for various media items like films, games, TV shows, and books
+//Defines an array called data, which contains information about various media medias (in this case, the movie 
+//"Inception"). Each media media in the array is an object with several properties, including:
+// Import cover images for various media medias like films, games, TV shows, and books
 import InceptionCover from "./images/Inception.jpg";
 import Witcher3Cover from "./images/Witcher3.jpg";
 import BreakingBadCover from "./images/BreakingBad.jpg";
@@ -10,34 +10,35 @@ import CasablancaCover from "./images/CasablancaCover.jpg";
 import PrideAndPrejudiceCover from "./images/PrideAndPrejudiceCover.jpg";
 import axios from "axios";
 import { useState, useEffect } from 'react';
-import Card from "./components/Card";
+import DbCard from "./components/DbCard";
+import React from "react";
 
 // fetch data for cards from database
 export const DbData = () => {
-  const [data, setData] = useState([]);
+  //initialize state management variables
+  const [media, setMedia] = useState('');
 
+  //get data from backend, set our state based on that data
   const FetchData = async () => {
-      const res = await axios.get('http://localhost:8080/media').then((response) =>{
+      await axios.get('http://localhost:8080/media').then((response) =>{
         const allMedia = response.data;
-        setData(allMedia);
+        setMedia(allMedia);
       }).catch(
         error => console.error(error)
       );
 
-
-  useEffect(() => {
-    
-    FetchData();
-  }, []);
-
-};
+    };
+  
+  useEffect(() => {FetchData();}, []);
+  
+  //double check the media data is being sent out
+  //console.log(media)
 
 return(
-  <Card props={data} />
+  <DbCard props={media} />
 )};
 
-// Defines an array called data, for a media items (Inceptions) with details like title, type, description, and access platforms
-//const data = [
+// Defines an array called data, for a media medias (Inceptions) with details like title, type, description, and access platforms
 const data = [
   {
     id: 1,

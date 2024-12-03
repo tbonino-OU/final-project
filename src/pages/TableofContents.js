@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import Card from '../components/Card';
 import data from '../CardData.js';
 import { DbData } from '../CardData.js';
+//import dbCard from '../components/DbCard.js';
 import '../css/TableofContents.css'
 
 const TableofContents = () => {
@@ -31,23 +32,27 @@ const TableofContents = () => {
     );
   });
 
-  const dbCards = DbData((item) => {
-    <Card
-        key={item.MediaID} // Each card needs a unique key to improve rendering performance
-        coverImage={item.MediaImage}
-        rating={null}
-        reviewCount={null}
-        accessMedia={null}
-        mediaTitle={item.Name}
-        mediaType={item.Type}
-        yearsOfRelease={item.RelDate}
-        synopsis={item.Description}
-        cast={null}
-        crew={null}
-        author={null}
-        location={null}
-      />
-  })
+  // const dbCards = DbData().props.map((item) => {
+  //   return(
+  //     <div>
+  //   <dbCard
+  //       key={item.MediaID} // Each card needs a unique key to improve rendering performance
+  //       coverImage={item.MediaImage}
+  //       rating={null}
+  //       reviewCount={null}
+  //       accessMedia={null}
+  //       mediaTitle={item.Name}
+  //       mediaType={item.Type}
+  //       yearsOfRelease={item.RelDate}
+  //       synopsis={item.Description}
+  //       cast={null}
+  //       crew={null}
+  //       author={null}
+  //       location={null}
+  //     />
+  //     </div>
+  //   )
+  // })
 
   return (
   <div>
@@ -55,7 +60,7 @@ const TableofContents = () => {
   <h1>Table of Contents</h1>
   {/* // Render the cards inside a section element */}
   <section className="section-experience-list">{cards}</section>
-  {/* <section className="section-experience-list">{dbCards}</section> */}
+  <section className="section-experience-list">{DbData()}</section>
   <Footer />
   </div>
   );
