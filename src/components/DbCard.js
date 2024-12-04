@@ -86,7 +86,7 @@ const dbCard = (props) => {
         })
     )
   } else {
-    return(<p>No additional media found.</p>)
+    return(<p>The back-end sends it's regards...</p>)
   }
 }
 

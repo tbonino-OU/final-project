@@ -5,7 +5,7 @@ import React from "react";// Import React to use JSX and components
 import { Link } from "react-router-dom";// Import Link for internal navigation without refreshing the page
 //import "./Footer.css";// Import CSS for styling the footer
 import logo from "../images/logo.png";// Import the logo image used in the footer
-import "../css/Footer.css"
+import "../css/Footer.css";// Import CSS for styling the footer
 
 function Footer() {
   return (
@@ -20,6 +20,20 @@ function Footer() {
               <b>@Mashed Potatoes@</b> {/* Brand name styled */}
             </i>
           </h3>
+        </div>
+        <div className="links-col">
+          <h3>Useful Links:</h3> {/* Links to main sections of the site */}
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/TableofContents">TableofContents</Link>
+            </li>
+            <li>
+              <Link to="/User">Account</Link>
+            </li>
+          </ul>
         </div>
         <div className="links-col">
           <h4>Follow us on:</h4>

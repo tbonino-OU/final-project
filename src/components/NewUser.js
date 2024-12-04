@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { signup } from '../store/authSlice'
 import { useState } from 'react'
 import { Navigate } from 'react-router-dom'
+import "../css/NewUser.css"
 
 const NewUser = () => {
     //values for new user form submission

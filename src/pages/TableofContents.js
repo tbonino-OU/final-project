@@ -7,6 +7,7 @@ import { DbData } from '../CardData.js';
 //import dbCard from '../components/DbCard.js';
 import '../css/TableofContents.css'
 
+
 const TableofContents = () => {
   
   // Use .map() to loop through the data and create a Card component for each item
@@ -55,7 +56,7 @@ const TableofContents = () => {
   // })
 
   return (
-  <div>
+  <div className="table-of-contents">
   <Header />
   <h1>Table of Contents</h1>
   {/* // Render the cards inside a section element */}

@@ -9,8 +9,9 @@ export default function Hamburger({isOpen}){
 
             <style jsx>{`
                 .hamburger{
-                    width: 2rem;
-                    height: 2rem;
+                    margin: 15px;
+                    width: 3rem;
+                    height: 4.3rem;
                     display: flex;
                     justify-content: space-around;
                     flex-flow: column nowrap;
@@ -18,9 +19,9 @@ export default function Hamburger({isOpen}){
                 }
 
                 .burger{
-                    width: 2rem;
-                    height: 0.25rem;
-                    border-radius: 10px;
+                    width: 2.3rem;
+                    height: 0.3rem;
+                    border-radius: 15px;
                     background-color: black;
                     transform-origin: 1px;
                     transition: all 0.3s linear;
