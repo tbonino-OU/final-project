@@ -1,0 +1,61 @@
+/* Styles for the Footer component, including layout, branding, navigation links, social media, newsletter, 
+and copyright sections. */
+
+.footer {
+    background-color: #F0A202;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .cols {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .about-col, .links-col, .news-col {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .about-col img {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .links-col h4, .news-col h4 {
+    margin-bottom: 10px;
+  }
+  
+  .links-col a, .news-col a {
+    display: block;
+    margin: 5px 0;
+    color: #3498db;
+  }
+  
+  .news-col form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .news-col input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .news-col button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .copyright {
+    font-size: 14px;
+    color: #555;
+  }

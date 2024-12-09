@@ -1,0 +1,19 @@
+.header{
+    background-color: #d95d39;
+    display: inline-flexbox;
+}
+
+.header h1{
+    text-align: center;
+    margin: auto;
+}
+
+.logo{
+    text-align: center;
+}
+
+.logo img{
+    width: 10%;
+    height: 10%;
+    object-fit: scale-down;
+}
